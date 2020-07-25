@@ -3,12 +3,14 @@ const cors = require('cors');
 const helmet = require('helmet');
 const authRouter = require('./api/auth/auth-router.js');
 const recipesRouter = require('./api/recipes/recipes-router.js');
+const cookieParser = require('cookie-parser');
 
 const server = express();
 
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
+server.use(cookieParser());
 
 server.use('/auth', authRouter);
 
