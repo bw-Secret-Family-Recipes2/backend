@@ -3,26 +3,27 @@ exports.seed = function(knex, Promise) {
   return knex('users').del()
     .then(function () {
       // Inserts seed entries
+      //password: admin
       return knex('users').insert([{
         "id": 1,
-        "username": "user1", 
-        "password": "$2a$10$L4JX51J.yW4NyyqFaskIx.3UvrAyd0AK3zwZu/8NiiJQhLMcmbQTW"
+        "username": "Amanda", 
+        "password": "$2a$10$e7BR5bbT31PL2aZSSso8JOatXWD28NT6DoQuSaUvnBV2z5HhxzfmS"
       }, {
         "id": 2,
-        "username": "user2",
-        "password": "$2a$10$L0M.fB2Nyi1B3QR0JagtN.uV1JuFsGEj7MGxo9HZlUmAz2N.i4B9."
+        "username": "Stephanie",
+        "password": "$2a$10$R8NBbJWz/nB0cKaVhVfffeW7kN6XWsf1d2i93fEGiK8/eI5YCyQvy"
       }, {
         "id": 3,
-        "username": "user3",
-        "password": "$2a$10$uVIZU/    Sqaa44oHEnF7tcFOdB.SDu40kGKtWWiLSQ7aDUBoaZAMD9."
+        "username": "Shirley",
+        "password": "$2a$10$sOFqk2Qb0Z.YuH/4gD6voeUlGtQNj4s5CATX2YDey8Uje8gzI8Gsy"
       }, {
         "id": 4,
-        "username": "user4",
-        "password":     "$2a$10$VsHMDkBB1E6.kBqv1jCPHuwEFTH6AD9B9BRnN5gXuVDetlqOjISO2"
+        "username": "Daniel",
+        "password": "$2a$10$BJfd7PEOL/a6LFr/rCrt3uawbPx.hus3QOquS04DdBj.SACRnA63S"
       }, {
         "id": 5,
-        "username": "user5",
-        "password": "$2a$10$7nYS5o7yiunutPVtIz/   LYecLQSU3TS5EGrVdAIi0KP8WZzFHS5f8W"
+        "username": "Mike",
+        "password": "$2a$10$LapwDsRJe5rxvfHKTzur2eRTXn0n/GZiqWjqez12MvpuT0o1O/7qS"
       }]);
     });
 };

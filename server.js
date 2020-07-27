@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const authRouter = require('./api/auth/auth-router.js');
 const recipesRouter = require('./api/recipes/recipes-router.js');
 const cookieParser = require('cookie-parser');
-
+require('dotenv').config()
 const server = express();
 
 server.use(helmet());
