@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require("dotenv").config();
 
 function restrict() {
     return async (req, res, next) => {

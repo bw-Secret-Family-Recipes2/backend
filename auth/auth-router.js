@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs'); // features password hashing function
 const jwt = require('jsonwebtoken');
-
+require("dotenv").config();
 const router = require('express').Router();
 const Users = require('../users/users-model.js');
 
