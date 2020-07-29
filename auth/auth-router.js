@@ -17,7 +17,7 @@ router.post("/register", (req, res) => {
         })
         .catch(err => {
             res.status(500).json({
-                message: 'Invalid'
+                message: 'Invalid, user already exists'
             });
         })
 });
