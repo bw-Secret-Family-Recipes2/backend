@@ -1,5 +1,6 @@
-
 exports.seed = function (knex, Promise) {
+  return knex('recs_ingreds').truncate()
+  .then(function () { 
   return knex('recs_ingreds').insert([
     { recipe_id: 1, ingredient_id: 1 }, // 1
     { recipe_id: 1, ingredient_id: 2 }, // 2
@@ -43,4 +44,5 @@ exports.seed = function (knex, Promise) {
     { recipe_id: 6, ingredient_id: 32 }, // 23
     { recipe_id: 6, ingredient_id: 10 }, // 23
   ]);
+})
 };

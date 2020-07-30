@@ -1,11 +1,12 @@
-
 exports.seed = function (knex, Promise) {
-  return knex('categories').insert([
-    { name: 'breads' }, // 1
-    { name: 'appetizer' }, // 2
-    { name: 'dessert' },  // 3
-    { name: 'soup' },  // 4
-    { name: 'vegan' },  // 5
-    { name: 'entree'}
+  return knex('categories').truncate()
+  .then(function () {
+    return knex('categories').insert([
+      { name: 'entree' }, // 1
+      { name: 'appetizer' }, // 2
+      { name: 'dessert' },  // 3
+      { name: 'soup' },  // 4
+      { name: 'vegan' }  // 5
   ]);
+});
 };

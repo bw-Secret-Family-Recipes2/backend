@@ -1,4 +1,6 @@
 exports.seed = function (knex, Promise) {
+  return knex('ingredients').truncate()
+  .then(function () { 
   return knex('ingredients').insert([
     { name: 'corn tortillas' }, // 1
     { name: 'shrimp' }, // 2
@@ -36,4 +38,5 @@ exports.seed = function (knex, Promise) {
     { name: 'minced onion' },  // 31
     { name: 'chopped parsley' }  // 32
   ]);
+  });
 };

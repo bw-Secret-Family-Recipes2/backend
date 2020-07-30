@@ -1,4 +1,6 @@
 exports.seed = function (knex, Promise) {
+  return knex('recipes').truncate()
+  .then(function () {
   return knex('recipes').insert([
     {
       name: 'Shrimp tacos',
@@ -40,6 +42,7 @@ exports.seed = function (knex, Promise) {
       category_id: '2',
       instructions: 'Add together, bake, eat.',
       ingredients: 'large mushroom caps, dungeness crab meat, butter, minced onion, chopped parsley'
-    }
+    } 
   ]);
+  })
 };
